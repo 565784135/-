@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <title>image测网速</title>
+</head>
+<body>
+<div id="a"></div>
+<script>
+  let img = new Image()
+  let date1 = Date.now()
+  img.src = 'https://c565784135.gitee.io/pubilc/image/11.png'
+  img.onload = function (e) {
+    let date2 = Date.now()
+    let kb = 45.2
+    let s =  Math.round(kb / ((date2 - date1)/1000))
+    document.getElementById('a').innerText = '你当前网速为'+s+'KB/S'
+    //好像不准啊
+  }
+
+</script>
+</body>
+</html>

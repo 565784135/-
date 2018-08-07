@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <title>123</title>
+</head>
+<body>
+<button onClick="b()">向主页面发送</button>
+<p></p>
+<script>
+  function b(){
+    //设置相同父域
+    window.parent.postMessage('我是子页面', location.origin);
+  }
+  //监听
+  window.onmessage = function(e){
+    document.querySelector('p').innerText = e.data
+  }
+</script>
+</body>
+</html>

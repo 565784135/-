@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <title>css执行js</title>
+  <style>
+    div{
+      background: url('javascript:alert("ie6");')
+    }
+  </style>
+</head>
+<body>
+<div>在 ie test 里打开才能执行</div>
+<img src="javascript:alert('xss');"></img>
+</body>
+</html>
